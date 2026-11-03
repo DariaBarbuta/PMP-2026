@@ -35,7 +35,7 @@ print("\ndelta_1 =", delta1)
 # delta[t, j] = scorul celui mai bun traseu care se termina in j la momentul t
 # psi[t, j] = starea de la t-1 din care vine acel traseu (ma ajuta la reconstructie)
 def viterbi(pi, A, B, o):
-    T, N = len(o), len(pi)
+    T, N = len(o), len(pi)  
     delta = np.zeros((T, N))
     psi = np.zeros((T, N), dtype=int)
     delta[0] = pi * B[:, o[0]]
